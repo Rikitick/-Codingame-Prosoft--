@@ -18,111 +18,111 @@ int main()
     cin >> l >> h; cin.ignore();
     
     string digits[20] = {""};
-    map<string, int> digitToValue;
+    map<string, int> digitVal;
     
     for (int i = 0; i < h; i++) {
         string numeral;
         cin >> numeral; cin.ignore();
         
         for (int j = 0; j < 20 * h; j++) {
-            int digitIndex = j / h;
-            digits[digitIndex].push_back(numeral[j]);
+            int digitInd = j / h;
+            digits[digitInd].push_back(numeral[j]);
         }
     }
     
     for (int i = 0; i < 20; i++) {
-        digitToValue[digits[i]] = i;
+        digitVal[digits[i]] = i;
     }
 
     // Читаем 1-ое число
-    int firstNumberLines;
-    cin >> firstNumberLines; cin.ignore();
+    int firstNumLines;
+    cin >> firstNumLines; cin.ignore();
     
-    string currentDigit = "";
-    vector<string> firstNumberDigits;
-    long long firstNumberValue = 0;
+    string curDigit = "";
+    vector<string> firstNumDigits;
+    long long firstNumVal = 0;
     
-    for (int i = 0; i < firstNumberLines; i++) {
+    for (int i = 0; i < firstNumLines; i++) {
         string digitLine;
         cin >> digitLine; cin.ignore();
-        currentDigit += digitLine;
+        curDigit += digitLine;
         
         if ((i + 1) % h == 0) {
-            firstNumberDigits.push_back(currentDigit);
-            currentDigit.clear();
+            firstNumDigits.push_back(curDigit);
+            curDigit.clear();
         }
     }
     
     // преобразуем число
-    long long power = 1;
-    while (firstNumberDigits.size() > 0) {
-        string digitRepresentation = firstNumberDigits.back();
-        firstNumberDigits.pop_back();
-        firstNumberValue += digitToValue[digitRepresentation] * power;
-        power *= 20;
+    long long p = 1;
+    while (firstNumDigits.size() > 0) {
+        string digitRepres = firstNumDigits.back();
+        firstNumDigits.pop_back();
+        firstNumVal += digitVal[digitRepres] * p;
+        p *= 20;
     }
 
     // читаем 2-ое число
-    int secondNumberLines;
-    cin >> secondNumberLines; cin.ignore();
+    int secondNumLines;
+    cin >> secondNumLines; cin.ignore();
     
-    currentDigit = "";
-    vector<string> secondNumberDigits;
-    long long secondNumberValue = 0;
+    curDigit = "";
+    vector<string> secondNumDigits;
+    long long secondNumVal = 0;
     
-    for (int i = 0; i < secondNumberLines; i++) {
+    for (int i = 0; i < secondNumLines; i++) {
         string digitLine;
         cin >> digitLine; cin.ignore();
-        currentDigit += digitLine;
+        curDigit += digitLine;
         
         if ((i + 1) % h == 0) {
-            secondNumberDigits.push_back(currentDigit);
-            currentDigit.clear();
+            secondNumDigits.push_back(curDigit);
+            curDigit.clear();
         }
     }
 
     // преобразуем число
-    power = 1;
-    while (secondNumberDigits.size() > 0) {
-        string digitRepresentation = secondNumberDigits.back();
-        secondNumberDigits.pop_back();
-        secondNumberValue += digitToValue[digitRepresentation] * power;
-        power *= 20;
+    p = 1;
+    while (secondNumDigits.size() > 0) {
+        string digitRepres = secondNumDigits.back();
+        secondNumDigits.pop_back();
+        secondNumVal += digitVal[digitRepres] * p;
+        p *= 20;
     }
 
-    char operation;
-    cin >> operation; cin.ignore();
+    char oper;
+    cin >> oper; cin.ignore();
 
-    long long resultValue;
-    if (operation == '*')
-        resultValue = firstNumberValue * secondNumberValue;
-    else if (operation == '/')
-        resultValue = firstNumberValue / secondNumberValue;
-    else if (operation == '+')
-        resultValue = firstNumberValue + secondNumberValue;
-    else if (operation == '-')
-        resultValue = firstNumberValue - secondNumberValue;
+    long long resVal;
+    if (oper == '*')
+        resVal = firstNumVal * secondNumVal;
+    else if (oper == '/')
+        resVal = firstNumVal / secondNumVal;
+    else if (oper == '+')
+        resVal = firstNumVal + secondNumVal;
+    else if (oper == '-')
+        resVal = firstNumVal - secondNumVal;
     
-    vector<string> resultDigits;
+    vector<string> resDigits;
     
     // случай, если результат = 0
-    if (resultValue == 0) {
-        resultDigits.push_back(digits[0]);
+    if (resVal == 0) {
+        resDigits.push_back(digits[0]);
     } else {
-        while (resultValue > 0) {
-            int digit = resultValue % 20;
-            resultDigits.push_back(digits[digit]);
-            resultValue /= 20;
+        while (resVal > 0) {
+            int digit = resVal % 20;
+            resDigits.push_back(digits[digit]);
+            resVal /= 20;
         }
     }
     
-    while (resultDigits.size() > 0) {
-        string digitRepresentation = resultDigits.back();
-        resultDigits.pop_back();
+    while (resDigits.size() > 0) {
+        string digitRepres = resDigits.back();
+        resDigits.pop_back();
         
         for (int i = 0; i < h; i++) {
             for (int j = 0; j < l; j++) {
-                cout << digitRepresentation[i * h + j];
+                cout << digitRepres[i * h + j];
             }
             cout << endl;
         }
