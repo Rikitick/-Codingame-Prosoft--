@@ -28,4 +28,6 @@ int main()
         }
         cout << maxMountain.ind << endl; 
     }
+
+    return 0;
 }
