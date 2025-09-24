@@ -54,4 +54,6 @@ int main()
             initial_ty++; 
         }
     }
+
+    return 0;
 }
