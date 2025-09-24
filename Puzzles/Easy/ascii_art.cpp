@@ -44,4 +44,6 @@ int main()
         }
         cout << outputLine << endl;
     }
+
+    return 0;
 }
