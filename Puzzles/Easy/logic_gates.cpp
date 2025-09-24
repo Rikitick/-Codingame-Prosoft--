@@ -45,12 +45,18 @@ int main()
         for (int i = 0; i < s1.length(); i++) {
             bool a = (s1[i] == '-'), b = (s2[i] == '-'), res;
             
-            if (gate == "AND") res = a && b;
-            else if (gate == "OR") res = a || b;
-            else if (gate == "XOR") res = a != b;
-            else if (gate == "NAND") res = !(a && b);
-            else if (gate == "NOR") res = !(a || b);
-            else if (gate == "NXOR") res = a == b;
+            if (gate == "AND")
+                res = a && b;
+            else if (gate == "OR")
+                res = a || b;
+            else if (gate == "XOR")
+                res = a != b;
+            else if (gate == "NAND")
+                res = !(a && b);
+            else if (gate == "NOR")
+                res = !(a || b);
+            else if (gate == "NXOR")
+                res = a == b;
             
             result += res ? '-' : '_';
         }
