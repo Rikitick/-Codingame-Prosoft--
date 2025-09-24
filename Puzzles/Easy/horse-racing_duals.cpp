@@ -32,4 +32,6 @@ int main()
     }
 
     cout << minDif << endl;
+
+    return 0;
 }
