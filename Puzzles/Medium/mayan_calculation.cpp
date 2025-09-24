@@ -17,7 +17,7 @@ int main()
     int h;
     cin >> l >> h; cin.ignore();
     
-    string mayanDigits[20] = {""};
+    string digits[20] = {""};
     map<string, int> digitToValue;
     
     for (int i = 0; i < h; i++) {
@@ -26,12 +26,12 @@ int main()
         
         for (int j = 0; j < 20 * h; j++) {
             int digitIndex = j / h;
-            mayanDigits[digitIndex].push_back(numeral[j]);
+            digits[digitIndex].push_back(numeral[j]);
         }
     }
     
     for (int i = 0; i < 20; i++) {
-        digitToValue[mayanDigits[i]] = i;
+        digitToValue[digits[i]] = i;
     }
 
     // Читаем 1-ое число
@@ -107,11 +107,11 @@ int main()
     
     // случай, если результат = 0
     if (resultValue == 0) {
-        resultDigits.push_back(mayanDigits[0]);
+        resultDigits.push_back(digits[0]);
     } else {
         while (resultValue > 0) {
             int digit = resultValue % 20;
-            resultDigits.push_back(mayanDigits[digit]);
+            resultDigits.push_back(digits[digit]);
             resultValue /= 20;
         }
     }
