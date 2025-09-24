@@ -63,4 +63,6 @@ int main()
         
         cout << quary[0] << " " << result << endl;
     }
+
+    return 0;
 }
