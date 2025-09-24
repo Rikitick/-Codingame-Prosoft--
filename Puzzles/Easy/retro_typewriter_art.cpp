@@ -21,27 +21,27 @@ int main()
 
     stringstream ss(t);
     string chunk;
-    string result;
+    string res;
     
     while (ss >> chunk) {
         if (chunk == "nl") {
-            result += '\n';
+            res += '\n';
             continue;
         }
         
-        int num_end = 0;
-        while (num_end < chunk.size() && isdigit(chunk[num_end])) {
-            num_end++;
+        int numEnd = 0;
+        while (numEnd < chunk.size() && isdigit(chunk[numEnd])) {
+            numEnd++;
         }
         
-        int count = stoi(chunk.substr(0, num_end));
+        int cnt = stoi(chunk.substr(0, numEnd));
 
-        string rest = chunk.substr(num_end);
+        string rest = chunk.substr(numEnd);
         
         char ch;
         if (rest.empty()) {
             ch = chunk.back();
-            count = stoi(chunk.substr(0, chunk.size() - 1));
+            cnt = stoi(chunk.substr(0, chunk.size() - 1));
         }
         else if (rest == "sp")
             ch = ' ';
@@ -52,8 +52,10 @@ int main()
         else
             ch = rest[0];
         
-        result += string(count, ch);
+        res += string(cnt, ch);
     }
     
-    cout << result << endl;
+    cout << res << endl;
+
+    return 0;
 }
