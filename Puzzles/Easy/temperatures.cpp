@@ -26,4 +26,6 @@ int main()
     // To debug: cerr << "Debug messages..." << endl;
 
     cout << res % 5527 << endl;
+
+    return 0;
 }
