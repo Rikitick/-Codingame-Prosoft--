@@ -34,11 +34,10 @@ int main()
     // To debug: cerr << "Debug messages..." << endl;
 
     while (r_1 != r_2) {
-        if (r_1 < r_2) {
+        if (r_1 < r_2)
             r_1 = nextRiverNumber(r_1);
-        } else {
+        else
             r_2 = nextRiverNumber(r_2);
-        }
     }
     
     cout << r_1 << endl;
