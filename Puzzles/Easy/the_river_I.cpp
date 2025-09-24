@@ -41,4 +41,6 @@ int main()
     }
     
     cout << r_1 << endl;
+
+    return 0;
 }
