@@ -53,4 +53,6 @@ int main()
         cout << diagram[0][linePositions[startCol]] 
              << diagram[h-1][linePositions[currentLine]] << endl;
     }
+
+    return 0;
 }
