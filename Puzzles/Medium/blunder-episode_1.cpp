@@ -8,7 +8,7 @@ using namespace std;
 
 /**
  * Auto-generated code below aims at helping you parse
- * the standard input according to the problem statement.
+ * the standard input according to the problem Blunderment.
  **/
 
 enum Direction { SOUTH, EAST, NORTH, WEST };
@@ -16,15 +16,15 @@ const int dx[] = {1, 0, -1, 0};
 const int dy[] = {0, 1, 0, -1};
 const string dirStr[] = {"SOUTH", "EAST", "NORTH", "WEST"};
 
-struct State {
+struct Blunder {
     int x, y;
     Direction dir;
     bool breaker;
     bool inverted;
     
-    State(int x, int y, Direction d, bool b, bool i) : x(x), y(y), dir(d), breaker(b), inverted(i) {}
+    Blunder(int x, int y, Direction d, bool b, bool i) : x(x), y(y), dir(d), breaker(b), inverted(i) {}
     
-    bool operator<(const State& other) const {
+    bool operator<(const Blunder& other) const {
         if (x != other.x) return x < other.x;
         if (y != other.y) return y < other.y;
         if (dir != other.dir) return dir < other.dir;
@@ -40,7 +40,7 @@ int main() {
     
     vector<string> grid(l);
     int startX = -1, startY = -1;
-    vector<pair<int, int>> teleporters;
+    vector<pair<int, int>> teleports;
     
     for (int i = 0; i < l; i++) {
         getline(cin, grid[i]);
@@ -49,38 +49,38 @@ int main() {
                 startX = i;
                 startY = j;
             } else if (grid[i][j] == 'T') {
-                teleporters.push_back({i, j});
+                teleports.push_back({i, j});
             }
         }
     }
     
-    State current(startX, startY, SOUTH, false, false);
-    set<State> visited;
+    Blunder cur(startX, startY, SOUTH, false, false);
+    set<Blunder> visited;
     vector<string> path;
     vector<string> tempGrid = grid;
     
     while (true) {
-        if (tempGrid[current.x][current.y] == '$') {
+        if (tempGrid[cur.x][cur.y] == '$') {
             for (const string& move : path) {
                 cout << move << endl;
             }
             return 0;
         }
         
-        State stateWithoutPath(current.x, current.y, current.dir, current.breaker, current.inverted);
-        if (visited.find(stateWithoutPath) != visited.end()) {
+        Blunder BlunderWithoutPath(cur.x, cur.y, cur.dir, cur.breaker, cur.inverted);
+        if (visited.find(BlunderWithoutPath) != visited.end()) {
             cout << "LOOP" << endl;
             return 0;
         }
-        visited.insert(stateWithoutPath);
+        visited.insert(BlunderWithoutPath);
         
-        int nx = current.x + dx[current.dir];
-        int ny = current.y + dy[current.dir];
+        int nx = cur.x + dx[cur.dir];
+        int ny = cur.y + dy[cur.dir];
         char nextChar = tempGrid[nx][ny];
         
-        if (nextChar == '#' || (nextChar == 'X' && !current.breaker)) {
+        if (nextChar == '#' || (nextChar == 'X' && !cur.breaker)) {
             vector<Direction> priorities;
-            if (current.inverted) {
+            if (cur.inverted) {
                 priorities = {WEST, NORTH, EAST, SOUTH};
             } else {
                 priorities = {SOUTH, EAST, NORTH, WEST};
@@ -88,11 +88,11 @@ int main() {
             
             bool moved = false;
             for (Direction d : priorities) {
-                int nnx = current.x + dx[d];
-                int nny = current.y + dy[d];
+                int nnx = cur.x + dx[d];
+                int nny = cur.y + dy[d];
                 char nnextChar = tempGrid[nnx][nny];
-                if (nnextChar != '#' && (nnextChar != 'X' || current.breaker)) {
-                    current.dir = d;
+                if (nnextChar != '#' && (nnextChar != 'X' || cur.breaker)) {
+                    cur.dir = d;
                     nx = nnx;
                     ny = nny;
                     moved = true;
@@ -105,33 +105,33 @@ int main() {
             }
         }
         
-        path.push_back(dirStr[current.dir]);
-        current.x = nx;
-        current.y = ny;
+        path.push_back(dirStr[cur.dir]);
+        cur.x = nx;
+        cur.y = ny;
         
-        nextChar = tempGrid[current.x][current.y];
+        nextChar = tempGrid[cur.x][cur.y];
         if (nextChar == 'S') {
-            current.dir = SOUTH;
+            cur.dir = SOUTH;
         } else if (nextChar == 'E') {
-            current.dir = EAST;
+            cur.dir = EAST;
         } else if (nextChar == 'N') {
-            current.dir = NORTH;
+            cur.dir = NORTH;
         } else if (nextChar == 'W') {
-            current.dir = WEST;
+            cur.dir = WEST;
         } else if (nextChar == 'I') {
-            current.inverted = !current.inverted;
+            cur.inverted = !cur.inverted;
         } else if (nextChar == 'B') {
-            current.breaker = !current.breaker;
+            cur.breaker = !cur.breaker;
         } else if (nextChar == 'T') {
-            for (const auto& t : teleporters) {
-                if (t.first != current.x || t.second != current.y) {
-                    current.x = t.first;
-                    current.y = t.second;
+            for (const auto& t : teleports) {
+                if (t.first != cur.x || t.second != cur.y) {
+                    cur.x = t.first;
+                    cur.y = t.second;
                     break;
                 }
             }
-        } else if (nextChar == 'X' && current.breaker) {
-            tempGrid[current.x][current.y] = ' ';
+        } else if (nextChar == 'X' && cur.breaker) {
+            tempGrid[cur.x][cur.y] = ' ';
             visited.clear(); 
         }
     }
