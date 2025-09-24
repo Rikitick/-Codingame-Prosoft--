@@ -61,4 +61,6 @@ int main()
         cout << "yes" << endl;
     else
         cout << "no" << endl;
+
+    return 0;
 }
