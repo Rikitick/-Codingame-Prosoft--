@@ -42,15 +42,15 @@ int main()
         if (rest.empty()) {
             ch = chunk.back();
             count = stoi(chunk.substr(0, chunk.size() - 1));
-        } else if (rest == "sp") {
-            ch = ' ';
-        } else if (rest == "bS") {
-            ch = '\\';
-        } else if (rest == "sQ") {
-            ch = '\'';
-        } else {
-            ch = rest[0];
         }
+        else if (rest == "sp")
+            ch = ' ';
+        else if (rest == "bS")
+            ch = '\\';
+        else if (rest == "sQ")
+            ch = '\'';
+        else
+            ch = rest[0];
         
         result += string(count, ch);
     }
