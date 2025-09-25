@@ -25,17 +25,17 @@ int main()
 
     int start = n / 2;
     vector<vector<bool>> visited(n, vector<bool>(n));
-    vector<pair<int, int>> q;
-    q.push_back({start, start});
+    vector<pair<int, int>> peaks;
+    peaks.push_back({start, start});
     visited[start][start] = true;
     
     int dx[] = {0, 0, 1, -1};
     int dy[] = {1, -1, 0, 0};
     
     bool found = false;
-    while (!q.empty()) {
-        pair<int, int> curPos = q.back();
-        q.pop_back();
+    while (!peaks.empty()) {
+        pair<int, int> curPos = peaks.back();
+        peaks.pop_back();
         int x = curPos.first;
         int y = curPos.second;
         
@@ -51,7 +51,7 @@ int main()
             if (nx >= 0 && nx < n && ny >= 0 && ny < n && !visited[nx][ny]) {
                 if (abs(map[x][y] - map[nx][ny]) <= 1) {
                     visited[nx][ny] = true;
-                    q.push_back({nx, ny});
+                    peaks.push_back({nx, ny});
                 }
             }
         }
