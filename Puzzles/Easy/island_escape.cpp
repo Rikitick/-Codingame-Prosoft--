@@ -34,10 +34,10 @@ int main()
     
     bool found = false;
     while (!q.empty()) {
-        auto current = q.back();
+        pair<int, int> curPos = q.back();
         q.pop_back();
-        int x = current.first;
-        int y = current.second;
+        int x = curPos.first;
+        int y = curPos.second;
         
         if (x == 0 || x == n-1 || y == 0 || y == n-1) {
             found = true;
@@ -57,10 +57,9 @@ int main()
         }
     }
     
-    if (found)
+    if (found) {
         cout << "yes" << endl;
-    else
+    } else {
         cout << "no" << endl;
-
-    return 0;
+    }
 }
