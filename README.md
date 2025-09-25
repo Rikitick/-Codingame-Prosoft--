@@ -23,11 +23,11 @@
 
 ## Eazy задачи 
   ### 1D Spreadsheet
-  [Код](./Puzzles/Eazy/1d_spreadsheet.cpp)
-  [Задача](https://www.codingame.com/ide/puzzle/1d-spreadsheet)
+  [Код](/Puzzles/Eazy/1d_spreadsheet.cpp)\n
+  [Задача](https://www.codingame.com/ide/puzzle/1d-spreadsheet)\n
   [К оглавлению](#оглавление)
   ### Ascii art
-  [Код](./Puzzles/Eazy/ascii_art.cpp)
+  [Код](/Puzzles/Eazy/ascii_art.cpp)
   [Задача](https://www.codingame.com/ide/puzzle/ascii-art)
   [К оглавлению](#оглавление)
 
@@ -36,4 +36,4 @@
 
 
 ## Hard задачи
-    [К оглавлению](#оглавление)
+  [К оглавлению](#оглавление)
