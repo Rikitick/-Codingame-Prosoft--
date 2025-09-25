@@ -36,22 +36,22 @@ int main()
     }
 
     for (int startCol = 0; startCol < numLines; startCol++) {
-        int currentPos = linePositions[startCol];
-        int currentLine = startCol;
+        int curPos = linePositions[startCol];
+        int curLine = startCol;
         
         for (int row = 1; row < h - 1; row++) {
-            if (currentPos > 0 && diagram[row][currentPos - 1] == '-') {
-                currentLine--;
-                currentPos = linePositions[currentLine];
+            if (curPos > 0 && diagram[row][curPos - 1] == '-') {
+                curLine--;
+                curPos = linePositions[curLine];
             }
-            else if (currentPos < w - 1 && diagram[row][currentPos + 1] == '-') {
-                currentLine++;
-                currentPos = linePositions[currentLine];
+            else if (curPos < w - 1 && diagram[row][curPos + 1] == '-') {
+                curLine++;
+                curPos = linePositions[curLine];
             }
         }
         
         cout << diagram[0][linePositions[startCol]] 
-             << diagram[h-1][linePositions[currentLine]] << endl;
+             << diagram[h-1][linePositions[curLine]] << endl;
     }
 
     return 0;
