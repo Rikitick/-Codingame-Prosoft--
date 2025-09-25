@@ -32,12 +32,9 @@ int main()
         string outputLine = "";
         for (char c : t) {
             c = toupper(c);
-            int pos;
-            if (c >= 'A' && c <= 'Z') {
+            int pos = 26;
+            if (c >= 'A' && c <= 'Z')
                 pos = c - 'A';
-            } else {
-                pos = 26; 
-            }
             
             int start = pos * l;
             outputLine += asciiArt[i].substr(start, l);
