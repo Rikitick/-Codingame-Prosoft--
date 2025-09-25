@@ -17,15 +17,15 @@ struct Cell {
     Cell() : calculated(false) {}
 };
 
-bool isReference(const string& str) {
+bool isReference(string& str) {
     return str[0] == '$';
 }
 
-int getReferenceIndex(const string& ref) {
+int getReferenceIndex(string& ref) {
     return stoi(ref.substr(1));
 }
 
-int getArgumentValue(const string& arg, const vector<Cell>& cells) {
+int getArgumentValue(string& arg, vector<Cell>& cells) {
     if (isReference(arg)) {
         int refIndex = getReferenceIndex(arg);
         return cells[refIndex].value;
