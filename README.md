@@ -6,7 +6,7 @@
   - [1D Spreadsheet](#1d-spreadsheet)
   - [Ascii art](#ascii-art)
   - [Defibrillators](#defibrillators)
-  - [Encryption/decryption of Enigma machine](#encryption/decryption-of-enigma-machine)
+  - [Encryption-decryption of Enigma machine](#encryption-decryption-of-enigma-machine)
   - [Ghost legs](#ghost-legs)
   - [Horse-racing duals](#horse-racing-duals)
   - [Island escape](#island-escape)
@@ -43,7 +43,7 @@
   __Трудности__: В `input`-е `Longitude` и `Latitude` даются с `,`, из-за этого `stod` выдаёт ошибку  
   [К оглавлению](#оглавление)
 
-  ### Encryption/decryption of Enigma machine
+  ### Encryption-decryption of Enigma machine
   [Код](/Puzzles/Easy/encryption_decryption_of_enigma_machine.cpp)  
   [Задача](https://www.codingame.com/ide/puzzle/encryptiondecryption-of-enigma-machine)  
   __Идея__: Описана в самой задаче. При декодировании просто сделать описанные действия в обратном порядке роторов  
