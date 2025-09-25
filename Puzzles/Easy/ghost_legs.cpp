@@ -40,11 +40,11 @@ int main()
         int curLine = startCol;
         
         for (int row = 1; row < h - 1; row++) {
-            if (curPos > 0 && diagram[row][curPos - 1] == '-') {
+            if (diagram[row][curPos - 1] == '-') {
                 curLine--;
                 curPos = linePositions[curLine];
             }
-            else if (curPos < w - 1 && diagram[row][curPos + 1] == '-') {
+            else if (diagram[row][curPos + 1] == '-') {
                 curLine++;
                 curPos = linePositions[curLine];
             }
