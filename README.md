@@ -18,21 +18,21 @@
   - [The descent](#the-descent)
   - [The River I](#the-river-I)
   - [Unary](#unary)
-- [Medium задачи](#medium)
-- [Hard задачи](#hard)
+- [Medium задачи](#medium-задачи)
+- [Hard задачи](#hard-задачи)
 
 ## Eazy задачи 
   ### 1D Spreadsheet
-    [Код](./Puzzles/Eazy/1d_spreadsheet.cpp)
-    [Задача](https://www.codingame.com/ide/puzzle/1d-spreadsheet)
-    [К оглавлению](#оглавление)
+  [Код](./Puzzles/Eazy/1d_spreadsheet.cpp)
+  [Задача](https://www.codingame.com/ide/puzzle/1d-spreadsheet)
+  [К оглавлению](#оглавление)
   ### Ascii art
-    [Код](./Puzzles/Eazy/ascii_art.cpp)
-    [Задача](https://www.codingame.com/ide/puzzle/ascii-art)
-    [К оглавлению](#оглавление)
+  [Код](./Puzzles/Eazy/ascii_art.cpp)
+  [Задача](https://www.codingame.com/ide/puzzle/ascii-art)
+  [К оглавлению](#оглавление)
 
 ## Medium задачи
-    [К оглавлению](#оглавление)
+  [К оглавлению](#оглавление)
 
 
 ## Hard задачи
