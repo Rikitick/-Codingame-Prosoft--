@@ -30,39 +30,30 @@ int main()
         string input_name_1;
         string input_name_2;
         cin >> output_name >> type >> input_name_1 >> input_name_2; cin.ignore();
-        outputs.push_back({output_name, type, input_name_1, input_name_2});
-    }
-    for (int i = 0; i < m; i++) {
 
-        // Write an answer using cout. DON'T FORGET THE "<< endl"
-        // To debug: cerr << "Debug messages..." << endl;
-        vector<string> quary = outputs[i];
-        string s1 = signals[quary[2]];
-        string s2 = signals[quary[3]];
-        string gate = quary[1];
         string result;
+        string firstSignal = signals[input_name_1];
+        string secondSignal = signals[input_name_2];
         
-        for (int i = 0; i < s1.length(); i++) {
-            bool a = (s1[i] == '-'), b = (s2[i] == '-'), res;
+        for (int j = 0; j < firstSignal.length(); j++) {
+            bool a = (firstSignal[j] == '-'), b = (secondSignal[j] == '-'), res;
             
-            if (gate == "AND")
+            if (type == "AND")
                 res = a && b;
-            else if (gate == "OR")
+            else if (type == "OR")
                 res = a || b;
-            else if (gate == "XOR")
+            else if (type == "XOR")
                 res = a != b;
-            else if (gate == "NAND")
+            else if (type == "NAND")
                 res = !(a && b);
-            else if (gate == "NOR")
+            else if (type == "NOR")
                 res = !(a || b);
-            else if (gate == "NXOR")
+            else if (type == "NXOR")
                 res = a == b;
             
             result += res ? '-' : '_';
         }
         
-        cout << quary[0] << " " << result << endl;
+        cout << output_name << " " << result << endl;
     }
-
-    return 0;
 }
