@@ -188,7 +188,7 @@
   
 ## Medium задачи
   ### Blunder - Episode 1
-  [Код](/Puzzles/Easy/blunder-episode_1.cpp)  
+  [Код](/Puzzles/Medium/blunder-episode_1.cpp)  
   [Задача](https://www.codingame.com/ide/puzzle/)  
   
   __Идея__:
@@ -198,7 +198,7 @@
   [К оглавлению](#оглавление)
 
   ### Conway sequence
-  [Код](/Puzzles/Easy/conway_sequence.cpp)  
+  [Код](/Puzzles/Medium/conway_sequence.cpp)  
   [Задача](https://www.codingame.com/ide/puzzle/)  
   
   __Идея__:
@@ -208,7 +208,7 @@
   [К оглавлению](#оглавление)
 
   ### Death first search - Episode 1
-  [Код](/Puzzles/Easy/death_first_search-episode_1.cpp)  
+  [Код](/Puzzles/Medium/death_first_search-episode_1.cpp)  
   [Задача](https://www.codingame.com/ide/puzzle/)  
   
   __Идея__:
@@ -218,7 +218,7 @@
   [К оглавлению](#оглавление)
 
   ### Dont panic - Episode 1
-  [Код](/Puzzles/Easy/dont_panic-episode_1.cpp)  
+  [Код](/Puzzles/Medium/dont_panic-episode_1.cpp)  
   [Задача](https://www.codingame.com/ide/puzzle/)  
   
   __Идея__:
@@ -228,7 +228,7 @@
   [К оглавлению](#оглавление)
 
   ### Dwarfs standing on the shoulders of giants
-  [Код](/Puzzles/Easy/dwarfs_standing_on_the_shoulders_of_giants.cpp)  
+  [Код](/Puzzles/Medium/dwarfs_standing_on_the_shoulders_of_giants.cpp)  
   [Задача](https://www.codingame.com/ide/puzzle/)  
   
   __Идея__:
@@ -238,7 +238,7 @@
   [К оглавлению](#оглавление)
 
   ### Mayan calculation
-  [Код](/Puzzles/Easy/mayan_calculation.cpp)  
+  [Код](/Puzzles/Medium/mayan_calculation.cpp)  
   [Задача](https://www.codingame.com/ide/puzzle/)  
   
   __Идея__:
@@ -248,7 +248,7 @@
   [К оглавлению](#оглавление)
 
   ### Network cabling
-  [Код](/Puzzles/Easy/network_cabling.cpp)  
+  [Код](/Puzzles/Medium/network_cabling.cpp)  
   [Задача](https://www.codingame.com/ide/puzzle/)  
   
   __Идея__:
@@ -258,7 +258,7 @@
   [К оглавлению](#оглавление)
 
   ### Scrabble
-  [Код](/Puzzles/Easy/scrabble.cpp)  
+  [Код](/Puzzles/Medium/scrabble.cpp)  
   [Задача](https://www.codingame.com/ide/puzzle/)  
   
   __Идея__:
@@ -268,7 +268,7 @@
   [К оглавлению](#оглавление)
 
   ### Shadows of the knight - Episode 1
-  [Код](/Puzzles/Easy/shadows_of_the_knight-episode_1.cpp)  
+  [Код](/Puzzles/Medium/shadows_of_the_knight-episode_1.cpp)  
   [Задача](https://www.codingame.com/ide/puzzle/)  
   
   __Идея__:
@@ -278,7 +278,7 @@
   [К оглавлению](#оглавление)
 
   ### Stock exchange losses
-  [Код](/Puzzles/Easy/stock_exchange_losses.cpp)  
+  [Код](/Puzzles/Medium/stock_exchange_losses.cpp)  
   [Задача](https://www.codingame.com/ide/puzzle/)  
   
   __Идея__:
@@ -288,7 +288,7 @@
   [К оглавлению](#оглавление)
 
   ### Telephone numbers
-  [Код](/Puzzles/Easy/telephone_numbers.cpp)  
+  [Код](/Puzzles/Medium/telephone_numbers.cpp)  
   [Задача](https://www.codingame.com/ide/puzzle/)  
   
   __Идея__:
@@ -298,7 +298,7 @@
   [К оглавлению](#оглавление)
 
   ### The fall - Episode 1
-  [Код](/Puzzles/Easy/the_fall-episode_1.cpp)  
+  [Код](/Puzzles/Medium/the_fall-episode_1.cpp)  
   [Задача](https://www.codingame.com/ide/puzzle/)  
   
   __Идея__:
@@ -308,7 +308,7 @@
   [К оглавлению](#оглавление)
 
   ### The gift
-  [Код](/Puzzles/Easy/the_gift.cpp)  
+  [Код](/Puzzles/Medium/the_gift.cpp)  
   [Задача](https://www.codingame.com/ide/puzzle/)  
   
   __Идея__:
@@ -318,7 +318,7 @@
   [К оглавлению](#оглавление)
 
   ### There is no spoon - Episode 1
-  [Код](/Puzzles/Easy/there_is_no_spoon-episode_1.cpp)  
+  [Код](/Puzzles/Medium/there_is_no_spoon-episode_1.cpp)  
   [Задача](https://www.codingame.com/ide/puzzle/)  
   
   __Идея__:
@@ -328,7 +328,7 @@
   [К оглавлению](#оглавление)
 
   ### War
-  [Код](/Puzzles/Easy/war.cpp)  
+  [Код](/Puzzles/Medium/war.cpp)  
   [Задача](https://www.codingame.com/ide/puzzle/)  
   
   __Идея__:
