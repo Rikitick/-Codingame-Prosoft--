@@ -10,17 +10,14 @@ using namespace std;
  * the standard input according to the problem statement.
  **/
 
-int sumOfDigits(int n) {
-    int sum = 0;
-    while (n > 0) {
-        sum += n % 10;
-        n /= 10;
-    }
-    return sum;
-}
-
+// Функция для получения следующего числа в digital river
 int nextRiverNumber(int n) {
-    return n + sumOfDigits(n);
+    int sum = 0, t = n;
+    while (t > 0) {
+        sum += t % 10;
+        t /= 10;
+    }
+    return n + sum;
 }
 
 int main()
@@ -34,13 +31,13 @@ int main()
     // To debug: cerr << "Debug messages..." << endl;
 
     while (r_1 != r_2) {
-        if (r_1 < r_2)
+        if (r_1 < r_2) {
             r_1 = nextRiverNumber(r_1);
-        else
+        } else {
             r_2 = nextRiverNumber(r_2);
+        }
     }
     
+    // Выводим точку встречи
     cout << r_1 << endl;
-
-    return 0;
 }
