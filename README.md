@@ -12,7 +12,7 @@
   - [Island escape](#island-escape)
   - [Logic gates](#logic-gates)
   - [MIME type](#mime-type)
-  - [Power of Thor - Episode 1](#power-of-thor-episode-1)
+  - [Power of Thor - Episode 1](#power-of-thor---episode-1)
   - [Retro typewriter art](#retro-typewriter-art)
   - [Temperatures](#temperatures)
   - [The descent](#the-descent)
