@@ -19,6 +19,21 @@
   - [The River I](#the-river-I)
   - [Unary](#unary)
 - [Medium задачи](#medium-задачи)
+  - [Blunder - Episode 1](#blunder---episode-1)
+  - [Conway sequence](#conway-sequence)
+  - [Death first search - Episode 1](#death-first-search---episode-1)
+  - [Don't panic - Episode 1](#don't-panic---episode-1)
+  - [Dwarfs standing on the shoulders of giants](#dwarfs-standing-on-the-shoulders-of-giants)
+  - [Mayan calculation](#mayan-calculation)
+  - [Network cabling](#network-cabling)
+  - [Scrabble](#scrabble)
+  - [Shadows of the knight - Episode 1](#shadows-of-the-knight---episode-1)
+  - [Stock exchange losses](#stock-exchange-losses)
+  - [Telephone numbers](#telephone-numbers)
+  - [The fall - Episode 1](#the-fall---episode-1)
+  - [The gift](#the-gift)
+  - [There is no spoon - Episode 1](#there-is-no-spoon---episode-1)
+  - [War](#war)
 - [Hard задачи](#hard-задачи)
 
 ## Easy задачи 
@@ -169,8 +184,157 @@
   __Трудности__: Сначала я попытался проходить по каждому символу по отдельности, из-за этого на втором тесте я выводил на стыке символов не 0 000 (3 единицы), а 0 00 0 0 (2 единицы, 1 единица)  
   
   [К оглавлению](#оглавление)
+
   
 ## Medium задачи
+  ### Blunder - Episode 1
+  [Код](/Puzzles/Easy/blunder-episode_1.cpp)  
+  [Задача](https://www.codingame.com/ide/puzzle/)  
+  
+  __Идея__:
+  
+  __Трудности__:
+  
+  [К оглавлению](#оглавление)
+
+  ### Conway sequence
+  [Код](/Puzzles/Easy/conway_sequence.cpp)  
+  [Задача](https://www.codingame.com/ide/puzzle/)  
+  
+  __Идея__:
+  
+  __Трудности__:
+  
+  [К оглавлению](#оглавление)
+
+  ### Death first search - Episode 1
+  [Код](/Puzzles/Easy/death_first_search-episode_1.cpp)  
+  [Задача](https://www.codingame.com/ide/puzzle/)  
+  
+  __Идея__:
+  
+  __Трудности__:
+  
+  [К оглавлению](#оглавление)
+
+  ### Don't panic - Episode 1
+  [Код](/Puzzles/Easy/dont_panic-episode_1.cpp)  
+  [Задача](https://www.codingame.com/ide/puzzle/)  
+  
+  __Идея__:
+  
+  __Трудности__:
+  
+  [К оглавлению](#оглавление)
+
+  ### Dwarfs standing on the shoulders of giants
+  [Код](/Puzzles/Easy/dwarfs_standing_on_the_shoulders_of_giants.cpp)  
+  [Задача](https://www.codingame.com/ide/puzzle/)  
+  
+  __Идея__:
+  
+  __Трудности__:
+  
+  [К оглавлению](#оглавление)
+
+  ### Mayan calculation
+  [Код](/Puzzles/Easy/mayan_calculation.cpp)  
+  [Задача](https://www.codingame.com/ide/puzzle/)  
+  
+  __Идея__:
+  
+  __Трудности__:
+  
+  [К оглавлению](#оглавление)
+
+  ### Network cabling
+  [Код](/Puzzles/Easy/network_cabling.cpp)  
+  [Задача](https://www.codingame.com/ide/puzzle/)  
+  
+  __Идея__:
+  
+  __Трудности__:
+  
+  [К оглавлению](#оглавление)
+
+  ### Scrabble
+  [Код](/Puzzles/Easy/scrabble.cpp)  
+  [Задача](https://www.codingame.com/ide/puzzle/)  
+  
+  __Идея__:
+  
+  __Трудности__:
+  
+  [К оглавлению](#оглавление)
+
+  ### Shadows of the knight - Episode 1
+  [Код](/Puzzles/Easy/shadows_of_the_knight-episode_1.cpp)  
+  [Задача](https://www.codingame.com/ide/puzzle/)  
+  
+  __Идея__:
+  
+  __Трудности__:
+  
+  [К оглавлению](#оглавление)
+
+  ### Stock exchange losses
+  [Код](/Puzzles/Easy/stock_exchange_losses.cpp)  
+  [Задача](https://www.codingame.com/ide/puzzle/)  
+  
+  __Идея__:
+  
+  __Трудности__:
+  
+  [К оглавлению](#оглавление)
+
+  ### Telephone numbers
+  [Код](/Puzzles/Easy/telephone_numbers.cpp)  
+  [Задача](https://www.codingame.com/ide/puzzle/)  
+  
+  __Идея__:
+  
+  __Трудности__:
+  
+  [К оглавлению](#оглавление)
+
+  ### The fall - Episode 1
+  [Код](/Puzzles/Easy/the_fall-episode_1.cpp)  
+  [Задача](https://www.codingame.com/ide/puzzle/)  
+  
+  __Идея__:
+  
+  __Трудности__:
+  
+  [К оглавлению](#оглавление)
+
+  ### The gift
+  [Код](/Puzzles/Easy/the_gift.cpp)  
+  [Задача](https://www.codingame.com/ide/puzzle/)  
+  
+  __Идея__:
+  
+  __Трудности__:
+  
+  [К оглавлению](#оглавление)
+
+  ### There is no spoon - Episode 1
+  [Код](/Puzzles/Easy/there_is_no_spoon-episode_1.cpp)  
+  [Задача](https://www.codingame.com/ide/puzzle/)  
+  
+  __Идея__:
+  
+  __Трудности__:
+  
+  [К оглавлению](#оглавление)
+
+  ### War
+  [Код](/Puzzles/Easy/war.cpp)  
+  [Задача](https://www.codingame.com/ide/puzzle/)  
+  
+  __Идея__:
+  
+  __Трудности__:
+  
   [К оглавлению](#оглавление)
 
 
