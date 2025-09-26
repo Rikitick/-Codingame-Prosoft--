@@ -22,7 +22,7 @@
   - [Blunder - Episode 1](#blunder---episode-1)
   - [Conway sequence](#conway-sequence)
   - [Death first search - Episode 1](#death-first-search---episode-1)
-  - [Don't panic - Episode 1](#don't-panic---episode-1)
+  - [Dont panic - Episode 1](#dont-panic---episode-1)
   - [Dwarfs standing on the shoulders of giants](#dwarfs-standing-on-the-shoulders-of-giants)
   - [Mayan calculation](#mayan-calculation)
   - [Network cabling](#network-cabling)
@@ -217,7 +217,7 @@
   
   [К оглавлению](#оглавление)
 
-  ### Don't panic - Episode 1
+  ### Dont panic - Episode 1
   [Код](/Puzzles/Easy/dont_panic-episode_1.cpp)  
   [Задача](https://www.codingame.com/ide/puzzle/)  
   
