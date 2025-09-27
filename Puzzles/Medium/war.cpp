@@ -31,18 +31,18 @@ int main()
         {'S', 4},
     };
     queue<string> player1;
-    int n; // the number of cards for player 1
+    int n; 
     cin >> n; cin.ignore();
     for (int i = 0; i < n; i++) {
-        string cardp_1; // the n cards of player 1
+        string cardp_1; 
         cin >> cardp_1; cin.ignore();
         player1.push(cardp_1);
     }
     queue<string> player2;
-    int m; // the number of cards for player 2
+    int m; 
     cin >> m; cin.ignore();
     for (int i = 0; i < m; i++) {
-        string cardp_2; // the m cards of player 2
+        string cardp_2; 
         cin >> cardp_2; cin.ignore();
         player2.push(cardp_2);
     }
