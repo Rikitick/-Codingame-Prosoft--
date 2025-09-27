@@ -11,6 +11,34 @@ using namespace std;
  * the standard input according to the problem statement.
  **/
 
+vector<string> inputNumDigits(int numLines, int h) {
+    string curDigit = "";
+    vector<string> numDigits;
+    for (int i = 0; i < numLines; i++) {
+        string digitLine;
+        cin >> digitLine; cin.ignore();
+        curDigit += digitLine;
+        
+        if ((i + 1) % h == 0) {
+            numDigits.push_back(curDigit);
+            curDigit.clear();
+        }
+    }
+    return numDigits;
+}
+
+long long getNumVal(map<string, int>& digitsVal, vector<string> numDigits) {
+    long long numVal = 0;
+    long long p = 1;
+    while (numDigits.size() > 0) {
+        string digitRepres = numDigits.back();
+        numDigits.pop_back();
+        numVal += digitsVal[digitRepres] * p;
+        p *= 20;
+    }
+    return numVal;
+}
+
 int main()
 {
     int l;
@@ -18,7 +46,7 @@ int main()
     cin >> l >> h; cin.ignore();
     
     string digits[20] = {""};
-    map<string, int> digitVal;
+    map<string, int> digitsVal;
     
     for (int i = 0; i < h; i++) {
         string numeral;
@@ -31,64 +59,18 @@ int main()
     }
     
     for (int i = 0; i < 20; i++) {
-        digitVal[digits[i]] = i;
+        digitsVal[digits[i]] = i;
     }
 
-    // Читаем 1-ое число
     int firstNumLines;
     cin >> firstNumLines; cin.ignore();
-    
-    string curDigit = "";
-    vector<string> firstNumDigits;
-    long long firstNumVal = 0;
-    
-    for (int i = 0; i < firstNumLines; i++) {
-        string digitLine;
-        cin >> digitLine; cin.ignore();
-        curDigit += digitLine;
-        
-        if ((i + 1) % h == 0) {
-            firstNumDigits.push_back(curDigit);
-            curDigit.clear();
-        }
-    }
-    
-    // преобразуем число
-    long long p = 1;
-    while (firstNumDigits.size() > 0) {
-        string digitRepres = firstNumDigits.back();
-        firstNumDigits.pop_back();
-        firstNumVal += digitVal[digitRepres] * p;
-        p *= 20;
-    }
+    vector<string> firstNumDigits = inputNumDigits(firstNumLines, h);
+    long long firstNumVal = getNumVal(digitsVal, firstNumDigits);
 
-    // читаем 2-ое число
     int secondNumLines;
     cin >> secondNumLines; cin.ignore();
-    
-    curDigit = "";
-    vector<string> secondNumDigits;
-    long long secondNumVal = 0;
-    
-    for (int i = 0; i < secondNumLines; i++) {
-        string digitLine;
-        cin >> digitLine; cin.ignore();
-        curDigit += digitLine;
-        
-        if ((i + 1) % h == 0) {
-            secondNumDigits.push_back(curDigit);
-            curDigit.clear();
-        }
-    }
-
-    // преобразуем число
-    p = 1;
-    while (secondNumDigits.size() > 0) {
-        string digitRepres = secondNumDigits.back();
-        secondNumDigits.pop_back();
-        secondNumVal += digitVal[digitRepres] * p;
-        p *= 20;
-    }
+    vector<string> secondNumDigits = inputNumDigits(secondNumLines, h);
+    long long secondNumVal = getNumVal(digitsVal, secondNumDigits);
 
     char oper;
     cin >> oper; cin.ignore();
