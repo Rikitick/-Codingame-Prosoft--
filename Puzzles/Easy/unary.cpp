@@ -19,11 +19,9 @@ int main()
     // To debug: cerr << "Debug messages..." << endl;
     
     string bin = "";
-    for (char c : message) {
-        for (int i = 6; i >= 0; i--) {
+    for (char c : message)
+        for (int i = 6; i >= 0; i--)
             bin += ((c >> i) & 1) ? '1' : '0';
-        }
-    }
     
     string res = "";
     int i = 0;
@@ -32,24 +30,20 @@ int main()
     while (i < n) {
         char cur = bin[i];
         int cnt = 1;
-        while (i + cnt < n && bin[i + cnt] == cur) {
+        while (i + cnt < n && bin[i + cnt] == cur)
             cnt++;
-        }
         
-        if (cur == '1') {
+        if (cur == '1')
             res += "0 ";
-        } else {
+        else
             res += "00 ";
-        }
         
-        for (int j = 0; j < cnt; j++) {
+        for (int j = 0; j < cnt; j++)
             res += "0";
-        }
         
         i += cnt;
-        if (i < n) {
+        if (i < n)
             res += " ";
-        }
     }
     
     cout << res << endl;
